@@ -16,69 +16,18 @@
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
 
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
--->
-
 </head>
 <body ng-app="app">
-
-	<div ng-include="'header.html'" scope="" onload=""></div>
-
-<div class="container" ng-controller="tablaController" ng-init="servicio()">	
 	
+<div ng-include="'header.html'"></div>
+
+<div class="container" ng-controller="tablaController" >
+
 	<search></search>
-
-	<h2 ng-click="ocultar()">Empresas</h2>
-	<table class="table table-borderless" >
-		<thead style="background-color: lightgray">
-			<tr>
-				<th class="text-left" style="font-size: 18px"> 
-					<div class="text-left nombreEmp" >Nombre</div>
-					<div class="text-right ubicacionEmp" >Ubicación</div>
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="empresa in empresas | filter:search"  class="empresa" >
-				<td>
-
-				<div ng-click="mostrar($index ,empresa.id) ">
-
-						<div id="accordion">
-						    <div id="headingOne">
-						      <h5 class="mb-0">
-						        <div data-toggle="collapse" data-target="#collapseOne{{$index}}" aria-expanded="true" aria-controls="collapseOne{{$index}}">
-						          <div class="nombreEmp">
-						          							          		
-						         	{{empresa.name}}
-						          	
-						          </div>
-						          <div class="text-right ubicacionEmp">{{empresa.offices[0].country}}</div> 
-						        </div>
-						      </h5>
-						    </div>
-						    <div id="collapseOne{{$index}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
-						      <div class="card-body">
-						        <!-- detalle ng-show="ver[$index]" -->
-								<detalle deta="detalle" ></detalle> 
-
-						      </div>
-						    </div>
-			
-						</div>
-					</div>
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-
+	<tabla></tabla>
+	
 </div>
 
-<footer>
-</footer>
 <script src="js/controllers.js"></script>
 <script src="js/directives.js"></script>
 <script src="js/factories.js"></script>

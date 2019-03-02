@@ -1,37 +1,37 @@
-
+<h2>Empresas</h2>
 	<table class="table table-borderless" >
 		<thead style="background-color: lightgray">
 			<tr>
-				<th class="text-left" style="font-size: 25px"> 
+				<th class="text-left" style="font-size: 18px"> 
 					<div class="text-left nombreEmp" >Nombre</div>
-					<div class="text-right ubicacionEmp" >Ubicacionn</div>
+					<div class="text-right ubicacionEmp" >Ubicación</div>
 				</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr ng-repeat="empresa in empresas | filter:search"  class="empresa" >
 				<td>
-				<!--div ng-click="details(empresa.id, $index)" -->
-				<div ng-click="mostrar($index ,empresa.id); ">
+
+				<div ng-click="mostrar($index ,empresa.id) ">
 
 						<div id="accordion">
 						    <div id="headingOne">
 						      <h5 class="mb-0">
 						        <div data-toggle="collapse" data-target="#collapseOne{{$index}}" aria-expanded="true" aria-controls="collapseOne{{$index}}">
 						          <div class="nombreEmp">
-						          	<h3>						          		
-						         		{{empresa.name}}
-						          	</h3>
+						          							          		
+						         	{{empresa.name}}
+						          	
 						          </div>
 						          <div class="text-right ubicacionEmp">{{empresa.offices[0].country}}</div> 
 						        </div>
 						      </h5>
 						    </div>
-						    <div id="collapseOne{{$index}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+						    <div id="collapseOne{{$index}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion">
 						      <div class="card-body">
-						        
-								<detalle deta="detalle" ng-show="ver[$index]"></detalle>
-	
+						    
+								<detalle deta="detalle"></detalle> 
+
 						      </div>
 						    </div>
 			
@@ -42,3 +42,4 @@
 			</tr>
 		</tbody>
 	</table>
+

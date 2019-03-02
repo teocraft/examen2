@@ -3,7 +3,12 @@ var tableController = function($scope, serviceEmpresas){
 	var detailsCompanies = {};
 	$scope.detalle = {};
 	$scope.ver = Array(3);
-	
+	$scope.flag = false;
+	$scope.cerrarDetalle = ()=>{
+		$scope.flag = false;
+	};	
+
+
 	$scope.ocultar = function(){
 		$scope.ver.fill(false);
 	}
@@ -13,8 +18,7 @@ var tableController = function($scope, serviceEmpresas){
 		$scope.ver[i] = true;
 		$scope.details(empId, i);
 	}
-
-s/* 	
+/* 	
 	uso de factory serviceEmpresas como servicio 
 */
 	serviceEmpresas.getCompanies()

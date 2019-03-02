@@ -27,6 +27,8 @@
     width: 240px;
   }
   .close{
+    position: relative;
+    top: 5px;
     float: right;
     padding: 4px;
     border: solid 1px black;
@@ -37,12 +39,6 @@
   .close:hover{
     background-color: lightgray;
     box-shadow: 0 0 0 0;
-  }
-
-  .row > div{
-    /*
-    border:solid 1px black;
-    */
   }
 
   .pad{
@@ -59,14 +55,17 @@
     position: absolute;
     border-radius: 50%;
     background-color: lightgray;
-    align-content:  center;
-    text-align: center;
-    color: white;
-    margin: auto;
+    padding: 2%;
     width: 5%;
     height:50%;
     left: 92%;
     top:25%;
-    display: inline-block;
-  }
 
+    display: inline-block;
+    transition: 0.5s;
+  }
+  .closeSearch:hover{
+    transition: 0.5s;
+    background-color: lightgreen;
+    box-shadow: 0 0 1px 1px;
+  }
