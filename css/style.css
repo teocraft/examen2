@@ -1,0 +1,72 @@
+.nombreEmp{
+    display: inline-block;
+    font-size: 18px;
+  }
+  .ubicacionEmp{
+    display: inline-block;
+    float: right;
+    font-size: 18px;
+  }
+  .empresa{
+    cursor: default;
+    transition: 0.5s;
+  }
+  .empresa:hover{
+    
+    border: solid 1px black;
+    padding: 4px;
+  }
+  .search{
+    border-radius: 20px 20px 20px 20px;
+    border-color: transparent;
+    font-style: italic;
+    width: 75%;
+    margin-left: 5px;
+  }
+  hr{
+    width: 240px;
+  }
+  .close{
+    float: right;
+    padding: 4px;
+    border: solid 1px black;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 1px 1px;
+  }
+  .close:hover{
+    background-color: lightgray;
+    box-shadow: 0 0 0 0;
+  }
+
+  .row > div{
+    /*
+    border:solid 1px black;
+    */
+  }
+
+  .pad{
+    padding-left: 40px;
+  }
+
+  .searchContain{
+    width: 100%;
+    border-radius:  30px 30px 30px 30px;
+    border: solid 1px blue;
+    padding: 2px;
+  }
+  .closeSearch{
+    position: absolute;
+    border-radius: 50%;
+    background-color: lightgray;
+    align-content:  center;
+    text-align: center;
+    color: white;
+    margin: auto;
+    width: 5%;
+    height:50%;
+    left: 92%;
+    top:25%;
+    display: inline-block;
+  }
+
